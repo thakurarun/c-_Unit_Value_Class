@@ -11,7 +11,41 @@ namespace Practice
         mg = 4
     }
 
-    public class MyUnit : IEquatable<MyUnit>, IComparable<MyUnit>
+    public interface IUnit : IEquatable<IUnit>, IComparable<IUnit>
+    {
+        decimal ConvertToGram();
+    }
+
+    public sealed class VoidMyUnit : IUnit
+    {
+        private VoidMyUnit()
+        { }
+        private static volatile VoidMyUnit instance;
+        public static VoidMyUnit Instance { get { return instance ?? (instance = new VoidMyUnit()); } }
+
+        public int CompareTo(IUnit other)
+        {
+            return 0;
+        }
+
+        public decimal ConvertToGram()
+        {
+            return 0;
+        }
+
+        public bool Equals(IUnit other)
+        {
+            return false;
+        }
+
+
+        public override string ToString()
+        {
+            return "n/a";
+        }
+    }
+
+    public class MyUnit : IUnit
     {
         Func<MyUnit, decimal> converter;
         const decimal GramsPerKiloGram = 1000M;
@@ -40,11 +74,11 @@ namespace Practice
             return ConvertToGram() == other.ConvertToGram();
         }
 
-        public static bool operator ==(MyUnit first, MyUnit second)
+        public static bool operator ==(MyUnit first, IUnit second)
         {
             return first.ConvertToGram() == second.ConvertToGram();
         }
-        public static bool operator !=(MyUnit first, MyUnit second)
+        public static bool operator !=(MyUnit first, IUnit second)
         {
             return first.ConvertToGram() != second.ConvertToGram();
         }
@@ -60,7 +94,7 @@ namespace Practice
             return Equals(obj as MyUnit);
         }
 
-        internal decimal ConvertToGram()
+        public decimal ConvertToGram()
         {
             if (this.converter != null)
             {
@@ -88,11 +122,16 @@ namespace Practice
             return Math.Round(value, 2);
         }
 
-        public int CompareTo(MyUnit other)
+        public int CompareTo(IUnit other)
         {
             var first = this.ConvertToGram();
             var second = other.ConvertToGram();
             return first.CompareTo(second);
+        }
+
+        public bool Equals(IUnit other)
+        {
+            return Equals(other as MyUnit);
         }
     }
 }

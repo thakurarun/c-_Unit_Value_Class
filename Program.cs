@@ -7,26 +7,28 @@ namespace Practice
     class Program
     {
 
-        static decimal MilligramToGrams(MyUnit unit)
-        {
-            return Math.Round(unit.weight / 1000, 2);
-        }
+        //static decimal MilligramToGrams(MyUnit unit)
+        //{
+        //    return Math.Round(unit.weight / 1000, 2);
+        //}
 
         static void Main(string[] args)
         {
-            var myWeight = new MyUnit(1, UnitType.kg);
-            var myWeight2Kg = new MyUnit(2, UnitType.mg);
+            
 
-            IEnumerable<MyUnit> list = new List<MyUnit>() { myWeight, myWeight2Kg };
+            //IUnit myWeight = new MyUnit(1, UnitType.kg);
+            //IUnit myWeight2Kg = new MyUnit(2, UnitType.mg);
+            //IUnit myNullUnit = VoidMyUnit.Instance;
+            //IUnit nullUnit = null;
+            //var list = new List<IUnit>() { myWeight, myWeight2Kg, myNullUnit, nullUnit};
 
-            var result = list.OrderBy(x=> x);
-            result.All(unit =>
-                 {
-                     Console.WriteLine(unit.ToString());
-                     return true;
-                 });
-
-
+            //var result = list.OrderByDescending(x=> x);
+            //result.All(unit =>
+            //     {
+            //         Console.WriteLine(unit.ToString());
+            //         return true;
+            //     });
+            
             //var myWeight2 = new MyUnit(1000, UnitType.gm);
             //var myWeight3 = new MyUnit(1000000, UnitType.mg, MilligramToGrams);
 
