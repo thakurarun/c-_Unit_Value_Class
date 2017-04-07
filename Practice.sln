@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practice", "Practice.csproj", "{E8D4F9EE-4E9F-4C43-9E73-240A94F80B02}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackerRank", "..\HackerRank\HackerRank.csproj", "{069A2504-0139-4492-8C2C-CC81484D0ED6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackerRank", "HackerRank\HackerRank.csproj", "{069A2504-0139-4492-8C2C-CC81484D0ED6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
