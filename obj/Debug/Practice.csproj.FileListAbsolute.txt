@@ -4,3 +4,9 @@ c:\users\arunktha\documents\visual studio 2015\Projects\Practice\bin\Debug\Pract
 c:\users\arunktha\documents\visual studio 2015\Projects\Practice\obj\Debug\Practice.csprojResolveAssemblyReference.cache
 c:\users\arunktha\documents\visual studio 2015\Projects\Practice\obj\Debug\Practice.exe
 c:\users\arunktha\documents\visual studio 2015\Projects\Practice\obj\Debug\Practice.pdb
+C:\Users\arun-\Source\Repos\c-_Unit_Value_Class\bin\Debug\Practice.exe.config
+C:\Users\arun-\Source\Repos\c-_Unit_Value_Class\bin\Debug\Practice.exe
+C:\Users\arun-\Source\Repos\c-_Unit_Value_Class\bin\Debug\Practice.pdb
+C:\Users\arun-\Source\Repos\c-_Unit_Value_Class\obj\Debug\Practice.csprojResolveAssemblyReference.cache
+C:\Users\arun-\Source\Repos\c-_Unit_Value_Class\obj\Debug\Practice.exe
+C:\Users\arun-\Source\Repos\c-_Unit_Value_Class\obj\Debug\Practice.pdb

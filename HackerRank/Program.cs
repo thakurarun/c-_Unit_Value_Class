@@ -1,5 +1,6 @@
 ﻿using HackerRank.Algorithm;
 using HackerRank.DataStructure;
+using System;
 
 namespace HackerRank
 {
@@ -8,11 +9,15 @@ namespace HackerRank
         static void Main(string[] args)
         {
             HourGlassProblem problem = new HourGlassProblem();
-
+            Console.WriteLine("Given Input\n");
+            problem
+                .Init()
+                .Data[0]
+                .Print();
+            
             var result = problem
-                            .Init()
                             .SumLargestHourGlass();
-            //System.Console.WriteLine(result);
+            Console.WriteLine($"\nSum of larget Hour glass: {result}\n");
         }
     }
 }
